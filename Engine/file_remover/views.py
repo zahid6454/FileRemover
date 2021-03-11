@@ -37,7 +37,6 @@ def index(request):
         # Going through every file path and calculating the date-time difference between every file or folder with
         # today's date-time. If the difference between a file or folder's date-time is greater than days_threshold then
         # remove that file or folder.
-        count = 0
         file_count = 0
         folder_count = 0
 
@@ -46,7 +45,6 @@ def index(request):
 
             # Looping over every file or folder for condition checking
             for file_folder_path, file_folder_date in all_file_folder.items():
-                count += 1
                 delta = current_date - file_folder_date
 
                 # Checking if the file or folder's date-time is greater than days_threshold or not
