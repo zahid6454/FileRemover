@@ -14,8 +14,8 @@ def index(request):
         # Retrieving threshold from the data
         days_threshold = data['days_threshold']
 
-        # Setting the Temp directory path
-        dir_path = 'C:/Windows/Temp/'
+        # Retrieving directory path from the data
+        dir_path = data['directory_path']
 
         # Collecting the file and folder path inside the Temp directory
         elements = os.listdir(dir_path)
